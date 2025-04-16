@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Navigation */
+.navbar {
+    background: #2c3e50;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #34495e;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ecf0f1;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: grey;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #34495e;
+}
+
+.nav-links a.active {
+    background: #3498db;
+    color: #fff;
+}
+
+.nav-links i {
+    margin-right: 8px;
+}
+
+/* Pages */
+.page {
+    display: none;
+    padding: 30px;
+}
+
+.page.active {
+    display: block;
+}
+
+.page h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.page button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.page button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 20px;
+    background: #f5f7fa;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+label i {
+    margin-right: 8px;
+    color: #3498db;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #e0e4e8;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    font-size: 1.1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Filter */
+.filter {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: #f5f7fa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Transactions */
+.transaction-section {
+    margin-bottom: 30px;
+}
+
+.transaction-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 15px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn, .edit-btn {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.edit-btn {
+    background: #3498db;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Insights Page */
+.insights-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.summary-card {
+    background: #f5f7fa;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.summary-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.summary-card p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.summary-card i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.chart-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    height: 400px;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chart-container h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100%;
+}
+
+.chart-container p {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Export/Import */
+.export-import {
+    text-align: center;
+    padding: 20px;
+    background: #f5f7fa;
+    border-top: 1px solid #e0e4e8;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center; /* Vertically center items */
+}
+
+.export-import button {
+    margin-right: 10px;
+}
+
+.import-container {
+    display: flex;
+    align-items: center; /* Align label and input in a single line on desktop */
+    gap: 8px; /* Space between label and input */
+}
+
+.import-container label {
+    margin: 0; /* Remove default margin to prevent misalignment */
+    white-space: nowrap; /* Prevent label text from wrapping */
+}
+
+.import-container input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #e0e4e8;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.import-container input[type="file"]::-webkit-file-upload-button {
+    padding: 8px 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.import-container input[type="file"]::-webkit-file-upload-button:hover {
+    background: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .page {
+        padding: 20px;
+    }
+
+    .insights-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container {
+        max-width: 300px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .summary-card {
+        max-width: 300px;
+    }
+
+    .export-import {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .import-container {
+        flex-direction: column; /* Stack label and input vertically on mobile */
+        align-items: center; /* Center items */
+        gap: 5px; /* Reduce gap for better spacing */
+    }
+
+    .import-container label {
+        margin-bottom: 5px; /* Add some spacing between label and input */
+    }
+
+    .import-container input {
+        width: 100%; /* Ensure input takes full width on mobile */
+        max-width: 26z0px; /* Limit width for better appearance */
+        
+    }
+}
