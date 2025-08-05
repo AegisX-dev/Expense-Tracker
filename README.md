@@ -8,6 +8,12 @@
 
 A professional-grade, feature-rich web application for comprehensive personal financial management. Built with modern web technologies, this application provides an intuitive interface for tracking expenses, managing budgets, analyzing spending patterns, and maintaining financial health.
 
+## 📱 Preview
+
+![Expense Tracker Pro Dashboard](https://github.com/AegisX-dev/Expense-Tracker/assets/dashboard-preview.png)
+
+*Modern dashboard with real-time financial overview, interactive charts, and comprehensive expense tracking*
+
 ## ✨ Features
 
 ### 🏠 Dashboard & Analytics
