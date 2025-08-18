@@ -210,6 +210,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Progressive Web App (PWA) support
 - Multi-user account management
 
+- **Deployment & Hosting**
+  - Vercel deployment integration
+  - Live demo at https://expense-tracker-one-wine.vercel.app/
+  - Favicon implementation with assets folder
+  - Preview image for documentation
+
 ## 🔄 Migration Guide
 
 ### Upgrading from v1.x to v2.0

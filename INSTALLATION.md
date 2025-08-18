@@ -2,8 +2,14 @@
 
 This guide will help you get Expense Tracker Pro up and running on your system. The application is designed to work in multiple environments, from simple file hosting to advanced deployment scenarios.
 
+## 🌐 Live Demo
+
+**Before installing locally, try the live demo:**
+**[https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)**
+
 ## 📋 Table of Contents
 
+- [Live Demo](#live-demo)
 - [Quick Start](#quick-start)
 - [System Requirements](#system-requirements)
 - [Installation Methods](#installation-methods)
@@ -16,17 +22,20 @@ This guide will help you get Expense Tracker Pro up and running on your system. 
 
 The fastest way to get started:
 
-1. **Download the project**
+1. **Use the live demo**
+   Visit [https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/) for immediate access
+
+2. **Or download locally**
    ```bash
    git clone https://github.com/AegisX-dev/Expense-Tracker.git
    cd Expense-Tracker
    ```
 
-2. **Open in browser**
+3. **Open in browser**
    - Double-click `index.html`, or
    - Open `index.html` in your preferred web browser
 
-3. **Start tracking!**
+4. **Start tracking!**
    - The application will work immediately with default settings
    - Data is stored locally in your browser
 
@@ -60,7 +69,13 @@ The fastest way to get started:
 
 ## 🛠️ Installation Methods
 
-### Method 1: Direct Download (Easiest)
+### Method 1: Use Live Demo (Easiest)
+
+Simply visit: **[https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)**
+
+No installation required! The application runs entirely in your browser.
+
+### Method 2: Direct Download
 
 1. **Download ZIP file**
    ```bash
@@ -78,7 +93,7 @@ The fastest way to get started:
    # Open index.html in your browser
    ```
 
-### Method 2: Git Clone (Recommended for developers)
+### Method 3: Git Clone (Recommended for developers)
 
 1. **Clone repository**
    ```bash
@@ -89,10 +104,10 @@ The fastest way to get started:
 2. **Verify files**
    ```bash
    ls -la
-   # Should see: index.html, script.js, styles.css, README.md
+   # Should see: index.html, script.js, styles.css, assets/, README.md
    ```
 
-### Method 3: Local Web Server (Best experience)
+### Method 4: Local Web Server (Best experience)
 
 For optimal performance, run with a local server:
 
@@ -132,27 +147,22 @@ php -S localhost:8000
 
 ### Initial Setup
 
-No configuration is required for basic usage. The application works out-of-the-box with sensible defaults.
+The application works out of the box with sensible defaults:
+- Currency: USD
+- Theme: Light mode
+- Auto-save: Enabled
 
 ### Customization Options
 
-#### 1. Default Currency
-```javascript
-// In script.js, around line 50
-this.currentCurrency = 'USD'; // Change to your preferred currency
-```
+**Change default currency:**
+1. Go to Settings page
+2. Select preferred currency from dropdown
+3. Existing data will be converted automatically
 
-#### 2. Theme Preference
-```javascript
-// In script.js, around line 60
-this.currentTheme = 'light'; // Options: 'light' or 'dark'
-```
-
-#### 3. Exchange Rate Update Interval
-```javascript
-// In script.js, around line 70
-this.exchangeRateUpdateInterval = 300000; // 5 minutes in milliseconds
-```
+**Theme preference:**
+1. Use the theme toggle in navigation
+2. Or go to Settings → Appearance
+3. Choose Light, Dark, or Auto (system preference)
 
 ### Browser Settings
 
@@ -182,10 +192,11 @@ if (typeof Storage !== 'undefined') {
 **Symptoms:** Blank page or loading errors
 
 **Solutions:**
-1. Check JavaScript console (F12) for errors
-2. Ensure JavaScript is enabled
-3. Try a different browser
-4. Use a local web server instead of file:// protocol
+1. Try the live demo first: [https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)
+2. Check JavaScript console (F12) for errors
+3. Ensure JavaScript is enabled
+4. Try a different browser
+5. Use a local web server instead of file:// protocol
 
 ```bash
 # Check if files exist
@@ -336,6 +347,7 @@ FROM nginx:alpine
 
 # Copy application files
 COPY . /usr/share/nginx/html
+COPY assets/ /usr/share/nginx/html/assets/
 
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
@@ -365,7 +377,16 @@ window.CONFIG = {
 
 ## 🌐 Deployment Options
 
+### Live Demo (Current)
+**[https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)**
+
 ### Static Hosting Services
+
+#### Vercel (Recommended)
+1. Fork the repository
+2. Connect to Vercel
+3. Deploy automatically
+4. Get a custom domain like: `your-app.vercel.app`
 
 #### GitHub Pages
 1. Fork the repository
@@ -379,12 +400,6 @@ window.CONFIG = {
 3. Publish directory: `/`
 4. Deploy automatically on commits
 
-#### Vercel
-```bash
-npm i -g vercel
-vercel --prod
-```
-
 #### Firebase Hosting
 ```bash
 npm install -g firebase-tools
@@ -397,7 +412,7 @@ firebase deploy
 #### AWS S3 + CloudFront
 1. Create S3 bucket
 2. Enable static website hosting
-3. Upload files
+3. Upload files including assets/
 4. Configure CloudFront distribution
 
 #### Google Cloud Storage
@@ -412,6 +427,7 @@ Add CDN headers for better performance:
 ```html
 <link rel="preload" href="styles.css" as="style">
 <link rel="preload" href="script.js" as="script">
+<link rel="preload" href="assets/Favicon.png" as="image">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 ```
@@ -433,7 +449,9 @@ const urlsToCache = [
     '/',
     '/styles.css',
     '/script.js',
-    '/index.html'
+    '/index.html',
+    '/assets/Favicon.png',
+    '/assets/Preview.png'
 ];
 
 self.addEventListener('install', event => {
@@ -465,7 +483,8 @@ Add to `index.html`:
       content="default-src 'self'; 
                script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; 
                style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-               font-src 'self' https://fonts.gstatic.com;">
+               font-src 'self' https://fonts.gstatic.com;
+               img-src 'self' data:;">
 ```
 
 ### HTTPS Configuration
@@ -479,9 +498,10 @@ certbot --nginx -d your-domain.com
 
 If you encounter issues during installation:
 
-1. **Check the troubleshooting section above**
-2. **Search existing issues**: [GitHub Issues](https://github.com/AegisX-dev/Expense-Tracker/issues)
-3. **Create a new issue** with:
+1. **Try the live demo first**: [https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)
+2. **Check the troubleshooting section above**
+3. **Search existing issues**: [GitHub Issues](https://github.com/AegisX-dev/Expense-Tracker/issues)
+4. **Create a new issue** with:
    - Operating system and version
    - Browser and version
    - Steps to reproduce
@@ -499,10 +519,13 @@ After installation, verify everything works:
 - [ ] Theme switching works
 - [ ] Mobile responsive design works
 - [ ] Export/import functionality works
+- [ ] Favicon displays correctly
 
 **Congratulations! 🎊 You've successfully installed Expense Tracker Pro!**
 
 Start by adding your first transaction and exploring the features. Check out the [README.md](README.md) for usage instructions and [CONTRIBUTING.md](CONTRIBUTING.md) if you want to contribute to the project.
+
+**Live Demo**: [https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)
 
 ---
 

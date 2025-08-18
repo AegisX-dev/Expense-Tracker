@@ -1,3 +1,4 @@
+d
 # 💰 Expense Tracker Pro
 
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/AegisX-dev/Expense-Tracker)
@@ -5,12 +6,19 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black.svg)](https://expense-tracker-one-wine.vercel.app/)
 
 A professional-grade, feature-rich web application for comprehensive personal financial management. Built with modern web technologies, this application provides an intuitive interface for tracking expenses, managing budgets, analyzing spending patterns, and maintaining financial health.
 
+## 🌐 Live Demo
+
+**[Try Expense Tracker Pro Live](https://expense-tracker-one-wine.vercel.app/)**
+
+Experience the full functionality of the application with the live demo hosted on Vercel.
+
 ## 📱 Preview
 
-![Expense Tracker Pro Dashboard](https://github.com/AegisX-dev/Expense-Tracker/assets/dashboard-preview.png)
+![Expense Tracker Pro Dashboard](assets/Preview.png)
 
 *Modern dashboard with real-time financial overview, interactive charts, and comprehensive expense tracking*
 
@@ -67,6 +75,7 @@ A professional-grade, feature-rich web application for comprehensive personal fi
 - **Icons**: Font Awesome 6.4.0
 - **Storage**: Browser localStorage
 - **Design**: CSS Grid, Flexbox, Custom Properties
+- **Deployment**: Vercel (Static Site Hosting)
 
 ### Browser Support
 - Chrome 90+ ✅
@@ -83,12 +92,17 @@ A professional-grade, feature-rich web application for comprehensive personal fi
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Option 1: Use Live Demo
+Visit **[https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)** to use the application immediately without any setup.
+
+### Option 2: Local Installation
+
+#### Prerequisites
 - Modern web browser (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
 - JavaScript enabled
 - No server setup required
 
-### Installation
+#### Installation
 1. **Clone the repository**
    ```bash
    git clone https://github.com/AegisX-dev/Expense-Tracker.git
@@ -149,13 +163,31 @@ Expense-Tracker/
 ├── index.html              # Main application file
 ├── styles.css              # Complete styling system
 ├── script.js               # Core application logic
+├── assets/                 # Static assets
+│   ├── Favicon.png        # Application favicon
+│   └── Preview.png        # Dashboard preview image
 ├── README.md               # This file
 ├── CONTRIBUTING.md         # Contribution guidelines
 ├── INSTALLATION.md         # Detailed setup instructions
-├── CHANGELOG.md            # Version history
-└── docs/                   # Documentation assets
-    └── screenshot.png      # Application preview
+└── CHANGELOG.md            # Version history
 ```
+
+## 🌐 Deployment
+
+### Vercel (Current)
+The application is currently deployed on Vercel at:
+**[https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)**
+
+To deploy your own version:
+1. Fork this repository
+2. Connect to Vercel
+3. Deploy automatically
+
+### Other Deployment Options
+- **GitHub Pages**: Free static hosting
+- **Netlify**: Continuous deployment from Git
+- **Firebase Hosting**: Google's hosting platform
+- **AWS S3**: Amazon's static website hosting
 
 ## 🤝 Contributing
 
@@ -197,10 +229,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Chart.js](https://www.chartjs.org/) for beautiful charts
 - [Font Awesome](https://fontawesome.com/) for icons
 - [Google Fonts](https://fonts.google.com/) for typography
+- [Vercel](https://vercel.com/) for hosting and deployment
 - The open-source community for inspiration
 
 ## 📞 Support
 
+- 🌐 **Live Demo**: [https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)
 - 🐛 [Report a Bug](https://github.com/AegisX-dev/Expense-Tracker/issues)
 - 💡 [Request a Feature](https://github.com/AegisX-dev/Expense-Tracker/issues)
 - 📧 [Contact Developer](mailto:your-email@example.com)
@@ -208,3 +242,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ by [AegisX-dev](https://github.com/AegisX-dev)**
+
+**Try it live: [https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)**

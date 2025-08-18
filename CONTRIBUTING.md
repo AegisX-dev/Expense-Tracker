@@ -33,6 +33,10 @@ Before you begin, ensure you have:
 - Git for version control
 - Basic knowledge of HTML, CSS, and JavaScript
 
+### Live Demo
+
+Test the current version at: **[https://expense-tracker-one-wine.vercel.app/](https://expense-tracker-one-wine.vercel.app/)**
+
 ### Setting Up Your Development Environment
 
 1. **Fork the repository**
